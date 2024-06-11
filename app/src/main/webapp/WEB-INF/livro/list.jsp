@@ -8,9 +8,10 @@
         <link href="/css/bootstrap.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="container"></div>
+        <%@ include file = "../_templates/navbar.jsp" %>
+        <div class="container">
         <h1>Livros</h1>
-            <a href="/livros/insert"class="btn btn-primary">Novo Livro</a>
+            <a href="/livros/insert">Novo Livro</a>
             <table class="table">
                 <tr>
                     <th>Id</th>
@@ -24,8 +25,8 @@
                         <td>${item.titulo}</td>
                         <td>${item.genero.nome}</td>
                         <td>
-                            <a href="/livros/update?id=${item.id}"class="btn btn-secondary">Editar</a>
-                            <a href="/livros/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            <a href="/livros/update?id=${item.id}" class="btn btn-secondary">Editar</a>
+                            <a href="/livros/delete?id=${item.id}" class="btn btn danger">Excluir</a>
                         </td>
                     </tr>
                 </c:forEach>
